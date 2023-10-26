@@ -9,27 +9,46 @@ public class Card : MonoBehaviour,IPointerClickHandler
     public Image targetImage;
     public Sprite frontSprite;
     public Sprite backSprite;
+    public Animator Anim;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        targetImage.sprite = frontSprite;
-        Text.SetActive(true);
-        button.SetActive(true);
+        Anim = gameObject.GetComponent<Animator>();
+        Anim.SetBool("Turn",true);
+       // targetImage.sprite = frontSprite;
+
+      //  Text.SetActive(true);
+       // button.SetActive(true);
     }
 
     public void OnAllOpen()
     {
-        targetImage.sprite = frontSprite;
-        Text.SetActive(true);
-        button.SetActive(true);
+        Anim = gameObject.GetComponent<Animator>();
+        Anim.SetBool("Turn", true);
+        // targetImage.sprite = frontSprite;
+       // Text.SetActive(true);
+       // button.SetActive(true);
     }
 
     public void OnChangeButton()
     {
-        targetImage.sprite = backSprite;
-        Text.SetActive(false);
-        button.SetActive(false);
+      //  Anim.SetBool("Turn", true);
+        Anim = gameObject.GetComponent<Animator>();
+        Anim.SetBool("Turn", false);
+        //  targetImage.sprite = backSprite;
+       // Text.SetActive(false);
+       // button.SetActive(false);
         Director directorObject = GameObject.Find("Director").GetComponent<Director>();
         directorObject.ChangeList(transform.gameObject);
+    }
+
+    public void Reset(PointerEventData eventData)
+    {
+        Anim = gameObject.GetComponent<Animator>();
+        Anim.SetBool("Turn", false);
+        // targetImage.sprite = frontSprite;
+
+        //  Text.SetActive(true);
+        // button.SetActive(true);
     }
 }

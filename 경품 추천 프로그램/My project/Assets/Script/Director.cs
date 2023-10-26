@@ -246,7 +246,7 @@ public class Director : MonoBehaviour
         {
             GameObject spwanedObject = Instantiate(Card, gridParent);
             spwanedObject.name = first_list[i].ToString();
-            spwanedObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = first_list[i].ToString();
+            spwanedObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = first_list[i].ToString();
         }
     }
 
@@ -257,7 +257,7 @@ public class Director : MonoBehaviour
         {
             GameObject spwanedObject = Instantiate(Card, gridParent);
             spwanedObject.name = second_list[i].ToString();
-            spwanedObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = second_list[i].ToString();
+            spwanedObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = second_list[i].ToString();
         }
     }
 
@@ -268,7 +268,7 @@ public class Director : MonoBehaviour
         {
             GameObject spwanedObject = Instantiate(Card, gridParent);
             spwanedObject.name = thrid_list[i].ToString();
-            spwanedObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = thrid_list[i].ToString();
+            spwanedObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = thrid_list[i].ToString();
         }
     }
 
@@ -280,7 +280,7 @@ public class Director : MonoBehaviour
         {
             GameObject spwanedObject = Instantiate(Card, gridParent);
             spwanedObject.name = fourth_list[i].ToString();
-            spwanedObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = fourth_list[i].ToString();
+            spwanedObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = fourth_list[i].ToString();
         }
     }
 
@@ -291,7 +291,7 @@ public class Director : MonoBehaviour
         {
             GameObject spwanedObject = Instantiate(Card, gridParent);
             spwanedObject.name = special_list[i].ToString();
-            spwanedObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = special_list[i].ToString();
+            spwanedObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = special_list[i].ToString();
         }
     }
 
@@ -345,7 +345,7 @@ public class Director : MonoBehaviour
                     first_list[index] = rand;
                     list.Remove(rand);
                     card.name = first_list[index].ToString();
-                    card.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = first_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = first_list[index].ToString();
                     break;
                 }
             }
@@ -359,7 +359,7 @@ public class Director : MonoBehaviour
                     second_list[index] = rand;
                     list.Remove(rand);
                     card.name = second_list[index].ToString();
-                    card.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = second_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = second_list[index].ToString();
                     break;
                 }
             }
@@ -373,7 +373,7 @@ public class Director : MonoBehaviour
                     thrid_list[index] = rand;
                     list.Remove(rand);
                     card.name = thrid_list[index].ToString();
-                    card.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = thrid_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = thrid_list[index].ToString();
                     break;
                 }
             }
@@ -387,7 +387,7 @@ public class Director : MonoBehaviour
                     fourth_list[index] = rand;
                     list.Remove(rand);
                     card.name = fourth_list[index].ToString();
-                    card.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = fourth_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = fourth_list[index].ToString();
                     break;
                 }
             }
@@ -402,7 +402,7 @@ public class Director : MonoBehaviour
                     special_list[index] = rand;
                     list.Remove(rand);
                     card.name = special_list[index].ToString();
-                    card.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = special_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = special_list[index].ToString();
                     break;
                 }
             }
