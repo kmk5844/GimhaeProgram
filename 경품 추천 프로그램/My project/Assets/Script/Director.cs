@@ -306,6 +306,11 @@ public class Director : MonoBehaviour
         }
     }
 
+    public void OnMainButton()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void OnExitButton()
     {
         Application.Quit();
