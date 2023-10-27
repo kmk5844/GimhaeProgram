@@ -98,7 +98,7 @@ public class Director : MonoBehaviour
     {
         if (ButtonFlag == false)
         {
-            if (inputNum1 + inputNum2 + inputNum3 + inputNum4 + inputNum5 < count && inputNum1 != -1 && inputNum2 != -1 && inputNum3 != -1 && inputNum4 != -1 && inputNum5 != -1)
+            if (inputNum1 + inputNum2 + inputNum3 + inputNum4 + inputNum5 <= count && inputNum1 != -1 && inputNum2 != -1 && inputNum3 != -1 && inputNum4 != -1 && inputNum5 != -1)
             {
                 Button.SetActive(true);
             }
@@ -339,6 +339,14 @@ public class Director : MonoBehaviour
             index = first_list.IndexOf(int.Parse(card.name));
             while (true)
             {
+                if(list.Count == 0)
+                {
+                    first_list[index] = 0;
+                    card.name = first_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = first_list[index].ToString();
+                    break;
+                }
+
                 int rand = UnityEngine.Random.Range(1, count + 1);
                 if (list.Contains(rand))
                 {
@@ -353,6 +361,14 @@ public class Director : MonoBehaviour
             index = second_list.IndexOf(int.Parse(card.name));
             while (true)
             {
+                if (list.Count == 0)
+                {
+                    second_list[index] = 0;
+                    card.name = second_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = second_list[index].ToString();
+                    break;
+                }
+
                 int rand = UnityEngine.Random.Range(1, count + 1);
                 if (list.Contains(rand))
                 {
@@ -367,6 +383,14 @@ public class Director : MonoBehaviour
             index = thrid_list.IndexOf(int.Parse(card.name));
             while (true)
             {
+                if (list.Count == 0)
+                {
+                    thrid_list[index] = 0;
+                    card.name = thrid_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = thrid_list[index].ToString();
+                    break;
+                }
+
                 int rand = UnityEngine.Random.Range(1, count + 1);
                 if (list.Contains(rand))
                 {
@@ -381,6 +405,14 @@ public class Director : MonoBehaviour
             index = fourth_list.IndexOf(int.Parse(card.name));
             while (true)
             {
+                if (list.Count == 0)
+                {
+                    fourth_list[index] = 0;
+                    card.name = fourth_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = fourth_list[index].ToString();
+                    break;
+                }
+
                 int rand = UnityEngine.Random.Range(1, count + 1);
                 if (list.Contains(rand))
                 {
@@ -396,6 +428,14 @@ public class Director : MonoBehaviour
             index = special_list.IndexOf(int.Parse(card.name));
             while (true)
             {
+                if (list.Count == 0)
+                {
+                    special_list[index] = 0;
+                    card.name = special_list[index].ToString();
+                    card.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = special_list[index].ToString();
+                    break;
+                }
+
                 int rand = UnityEngine.Random.Range(1, count + 1);
                 if (list.Contains(rand))
                 {
